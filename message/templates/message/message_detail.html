@@ -2,6 +2,9 @@
 
 {% block content %}
 <h2>檢視留言</h2>
+{% if user.is_authenticated %} {% endif %}
+<a herf="{% url 'msg_delete' message.id %}">刪除</a>
+{% endif %}
 <table border="1">
   <tr>
     <th>留言者</th>
